@@ -211,13 +211,13 @@ User Datagram Protocol，即 用户数据报协议
   </tr>
   <tr>
     <td>UDP</td>
-    <td>非面向连接</td>
+    <td>无连接</td>
     <td>不可靠</td>
-    <td>报文</td>
+    <td>数据报文段</td>
     <td>快</td>
     <td>少</td>
     <td>要求通信速度快</td>
-    <td>8字节</td>
+    <td>8字节，由4个字段组成</td>
   </tr>
 </table>
 
