@@ -10,6 +10,9 @@
 
 - 网络通信
   * [网络通信基础](internet)
+  * [TCP详解](internet/TCP%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md)
+  * [Socket详解](internet/Socket%E8%AF%A6%E8%A7%A3.md)
+  * [HTTP详解](internet/Http%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md)
 
 - Jetpack Compose
   * [Jetpack Compose 实现一个图片选择框架](https://juejin.cn/post/7108420791502372895)
