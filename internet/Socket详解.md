@@ -468,3 +468,12 @@ void socketConnect(InetAddress address, int port, int timeout) throws IOExceptio
 
 
 
+## ServerSocket
+
+ServerSocket 是服务端 Socket
+
+listen() 是服务端的监听，代表 tcp连接过程中的第二次牵手
+
+accept() 代表是 tcp连接过程中的第三次牵手，也是服务端触发
+
+

@@ -14,6 +14,12 @@
   * [Socket详解](internet/Socket%E8%AF%A6%E8%A7%A3.md)
   * [HTTP详解](internet/Http%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md)
 
+- Framework
+  * Binder
+  * AMS
+  * WMS
+  * PMS
+
 - Jetpack Compose
   * [Jetpack Compose 实现一个图片选择框架](https://juejin.cn/post/7108420791502372895)
   * [不止 Android，Compose Multiplatform 初探](https://juejin.cn/post/7062533562460799013)
