@@ -1,12 +1,11 @@
+<p>Fork From https://github.com/leavesCZY/AndroidGuide</p>
+
 # <p align="center"> AndroidGuide </p>
 
 <p align="center">🎁🎁🎁 这是一份给 Android Developer 的进阶不完整指南，喜欢写又长又臭的文章，希望对你有所帮助 🤣🤣🤣</p>
 
-<p align="center">原创不易，欢迎关注公众号：<b>字节数组</b></p>
 
-<p align="center">第一时间看最新文章</p>
 
-<div align=center><img src ="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/adbc507fc3704fd8955aae739a433db2~tplv-k3u1fbpfcp-zoom-1.image"/></div>
 
 - 网络通信
   * [网络通信基础](internet)

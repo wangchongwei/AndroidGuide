@@ -10,6 +10,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.sync.Mutex
+import java.lang.Runnable
+import java.util.concurrent.locks.Lock
 import java.util.concurrent.locks.ReentrantLock
 
 class LockActivity : AppCompatActivity() {
@@ -22,6 +24,12 @@ class LockActivity : AppCompatActivity() {
         binding = ActivityLockBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initView()
+
+        initData()
+
+    }
+
+    private fun initData() {
 
     }
 
@@ -48,6 +56,16 @@ class LockActivity : AppCompatActivity() {
 
         binding.startLock.setOnClickListener {
             testLock()
+        }
+
+        binding.deadLock.setOnClickListener {
+            val any1 = Any()
+            val any2 = Any()
+            val thread1: Thread = Thread(TestDeadLock(true, any1, any2))
+            val thread2: Thread = Thread(TestDeadLock(false, any1, any2))
+
+            thread1.start()
+            thread2.start()
         }
     }
 
@@ -86,3 +104,55 @@ class LockActivity : AppCompatActivity() {
 
 }
 
+class TestDeadLock(var flag: Boolean, var any1: Any, var any2: Any) : Runnable {
+
+    override fun run() {
+        if(flag) {
+            synchronized(any1) {
+                println("${flag} 线程: 获取到any1的锁")
+                Thread.sleep(1000)
+
+                synchronized(any2) {
+                    println("${flag} 线程: 获取到any2的锁")
+                }
+            }
+        } else {
+            synchronized(any2) {
+                println("${flag} 线程: 获取到any2的锁")
+                Thread.sleep(1000)
+
+                synchronized(any1) {
+                    println("${flag} 线程: 获取到any1的锁")
+                }
+            }
+        }
+        println("${flag} 线程: 未出现死锁!!!")
+    }
+}
+
+
+class DeadLockTest(var flag: Boolean, var lock1: Lock, var lock2: Lock): Thread() {
+
+    override fun run() {
+        super.run()
+        if (flag) {
+           lock1.lock()
+            println("${flag} 线程获取到 lock1")
+           Thread.sleep(1000)
+            lock2.lock()
+            println("${flag} 线程获取到 lock2")
+
+            lock1.unlock()
+            lock2.unlock()
+        } else {
+            lock2.lock()
+            println("${flag} 线程获取到 lock1")
+            Thread.sleep(1000)
+            lock1.lock()
+            println("${flag} 线程获取到 lock2")
+
+            lock2.unlock()
+            lock1.unlock()
+        }
+    }
+}

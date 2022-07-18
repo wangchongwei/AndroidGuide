@@ -41,4 +41,16 @@
         android:textAllCaps="false"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/startLock"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp"
+        android:id="@+id/deadLock"
+        android:text="死锁"
+        android:textAllCaps="false"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
