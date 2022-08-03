@@ -30,4 +30,39 @@
         android:id="@+id/binder"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/binder"
+        android:layout_marginTop="10dp"
+        android:text="AIDL"
+        android:textAllCaps="false"
+        android:id="@+id/aidl"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aidl"
+        android:layout_marginTop="10dp"
+        android:text="截取屏幕"
+        android:textAllCaps="false"
+        android:id="@+id/screen"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/screen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/image"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

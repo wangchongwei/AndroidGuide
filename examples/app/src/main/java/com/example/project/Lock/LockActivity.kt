@@ -19,6 +19,9 @@ class LockActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLockBinding
     private var liveData: MutableLiveData<String> = MutableLiveData("defaultValue")
 
+    @Volatile
+    private var num = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLockBinding.inflate(layoutInflater)
@@ -69,16 +72,11 @@ class LockActivity : AppCompatActivity() {
         }
     }
 
-    @Synchronized
-    private fun test() {
-
-    }
-
     private fun testLock() = runBlocking {
         var i = 0
         val jobs = mutableListOf<Job>()
         var lock = ReentrantLock()
-
+        // kotlin中的锁
         val mutex = Mutex()
 
         repeat(10) {
@@ -104,6 +102,7 @@ class LockActivity : AppCompatActivity() {
 
 }
 
+// synchronized 死锁
 class TestDeadLock(var flag: Boolean, var any1: Any, var any2: Any) : Runnable {
 
     override fun run() {

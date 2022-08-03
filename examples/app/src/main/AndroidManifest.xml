@@ -14,6 +14,15 @@
         android:theme="@style/Theme.ExampleProject"
         tools:targetApi="31">
         <activity
+            android:name=".aidl.AidlActivity"
+            android:exported="false" />
+
+        <service
+            android:name="com.example.project.aidl.server.MyAidlService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
             android:name=".Binder.BinderActivity"
             android:exported="false" />
         <activity
@@ -29,9 +38,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".Binder.RemoteService"
-            android:process=":remote"
-            ></service>
+        <service
+            android:name=".Binder.RemoteService"
+            android:process=":remote" />
     </application>
 
 </manifest>
