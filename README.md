@@ -12,6 +12,7 @@
   * [TCP详解](internet/TCP%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md)
   * [Socket详解](internet/Socket%E8%AF%A6%E8%A7%A3.md)
   * [HTTP详解](internet/Http%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md)
+  * [HTTPS详解](internet/HTTPS%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3.md)
 
 - Framework
   * [Binder](android_framework/Binder.md)
@@ -28,6 +29,10 @@
   * [学不动也要学，Jetpack Compose 写一个 IM APP（二）](https://juejin.cn/post/7028397244894330917)
   * [学不动也要学，Jetpack Compose 玩一把俄罗斯方块](https://juejin.cn/post/6974585048762679310)
   * [学不动也要学，Jetpack Compose 实现自定义绘制](https://juejin.cn/post/6996568363581308959)
+
+
+- android UI
+  * [渲染](https://www.jianshu.com/p/6474297924b6)
 
 
 - Flutter
@@ -101,10 +106,11 @@
   - [Android 主流开源库源码分析（一）- EventBus 源码详解](https://juejin.cn/post/6881265680465788936)
   - [Android 主流开源库源码分析（二）- EventBus 自己实现一个](https://juejin.cn/post/6881808026647396366)
   - [Android 主流开源库源码分析（三）- ARouter 源码详解](https://juejin.cn/post/6882553066285957134)
-  - [Android 主流开源库源码分析（四）- ARouter 自己实现一个](https://juejin.cn/post/6882553066285957134)
+  - [Android 主流开源库源码分析（四）- ARouter 自己实现一个](https://juejin.cn/post/6883105868326862856)
   - [Android 主流开源库源码分析（五）- LeakCanary 源码详解](https://juejin.cn/post/6884225131015569421)
   - [Android 主流开源库源码分析（六）- LeakCanary 扩展阅读](https://juejin.cn/post/6884526739646185479)
-  - [Android 主流开源库源码分析（七）- Retrofit 源码详解](https://juejin.cn/post/6886121327845965838)
+  - [Android 主流开源库源码分析（七）- Retrofit 使用详解](https://juejin.cn/post/6886121327845965838)
+    - [Retrofit 原理解析](https://www.jianshu.com/p/e0f214685b8d)
   - [Android 主流开源库源码分析（八）- Retrofit 与 LiveData 的结合使用](https://juejin.cn/post/6887408273213882375)
   - [Android 主流开源库源码分析（九）- Glide 源码详解](https://juejin.cn/post/6891307560557608967)
   - [Android 主流开源库源码分析（十）- Glide 你可能不知道的知识点](https://juejin.cn/post/6892751013544263687)

@@ -319,3 +319,43 @@ class RemoteService: Service() {
 
 * 注意此处的 android:process=":remote", 这是指定 service 运行进程为 包名 + :remote
 > process 用于指定进程名，默认与包名一致
+
+
+
+
+## Binder原理
+
+参考：https://www.jianshu.com/p/4d8f4d8f88b9
+
+基于内存映射 mmap，一次拷贝
+
+1，Binder驱动在内核空间创建一个数据接收缓存区B2；
+
+2，将内核缓存区B1和接收进程地址空间S映射到Binde创建一个物理地址空间B2，实现地址映射；
+
+3，发送方进程通过系统调用 copy_from_user() 将数据 copy 到内核缓存区B1，由于内核缓存区B1和接收进程的地址空间S存在内存映射，因此也就相当于把数据发送到了接收进程的用户空间，这样便完成了一次进程间的通信。
+
+![binder通信原理](images/binder1.png)
+
+
+* 多种跨进程通信手段
+    - 管道
+    - 共享内存
+    - 消息队列
+    - 信号量
+    - Socket
+    - Binder
+
+### 为何使用Binder
+
+* 高效
+    内存映射、一次拷贝
+
+    管道、队列等需要两次内存拷贝
+
+
+* 安全
+    传统的进程通信方式对于通信双方的身份并没有做出严格的验证，接收方无法获得对方进程可靠的UID/PID(用户ID/进程ID)，只 有在上层协议上进行架设；
+
+* 可以很好的实现Client-Server(CS)架构
+    Socket是Client-Server的通信 方式。但是，  Socket主要用于网络间通信以及本机中进程间的低速通信，它的传输效率太低。
