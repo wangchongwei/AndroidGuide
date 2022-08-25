@@ -14,6 +14,10 @@ import com.example.project.Binder.BinderActivity
 import com.example.project.Lock.LockActivity
 import com.example.project.aidl.AidlActivity
 import com.example.project.databinding.ActivityMainBinding
+import com.example.project.glide.GlideActivity
+import com.example.project.location.LocationActivity
+import com.example.project.proxy.ProxyActivity
+import com.example.project.screenauto.ScreentAutoActivity
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 
@@ -60,7 +64,18 @@ class MainActivity : AppCompatActivity() {
 
         binding.screen.setOnClickListener {
 //            getScreenShotPower()
-            screenshotView()
+//            screenshotView()
+        }
+
+        binding.screenAuto.setOnClickListener {
+            startActivity(Intent(this, ScreentAutoActivity::class.java))
+        }
+
+        binding.proxy.setOnClickListener {
+            startActivity(Intent(this, ProxyActivity::class.java))
+        }
+        binding.glide.setOnClickListener {
+            startActivity(Intent(this, GlideActivity::class.java))
         }
 
     }
@@ -86,7 +101,6 @@ class MainActivity : AppCompatActivity() {
         view.draw(canvas)
         // view.setDrawingCacheEnabled(false); // 清空缓存，可用于实时截图
 
-        binding.image.setImageBitmap(bitmap)
 
         return getBitmapByte(bitmap)
     }

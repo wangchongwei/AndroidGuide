@@ -131,3 +131,6 @@
   * [Java & Android 集合框架须知须会（一）](https://juejin.cn/post/6901317365561032712)
   * [Java & Android 集合框架须知须会（二）](https://juejin.cn/post/6931007634028003341)
   * [Java & Android 集合框架须知须会（三）](https://juejin.cn/post/6931563785245163534)
+
+- other
+  * [mmap](https://zhuanlan.zhihu.com/p/429455424)

@@ -55,14 +55,45 @@
         android:id="@+id/screen"
         />
 
-
-    <ImageView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/screen"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/image"
+        android:layout_marginTop="10dp"
+        android:text="屏幕适配"
+        android:textAllCaps="false"
+        android:id="@+id/screenAuto"
+
         />
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screenAuto"
+        android:layout_marginTop="10dp"
+        android:text="Proxy"
+        android:textAllCaps="false"
+        android:id="@+id/proxy"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proxy"
+        android:layout_marginTop="10dp"
+        android:text="Glide"
+        android:textAllCaps="false"
+        android:id="@+id/glide"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
